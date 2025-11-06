@@ -1,4 +1,4 @@
-import ZNotify from "./ZNotify";
+import ZNotify from "./logifly";
 import { DiscordClient } from "./clients/Discord";
 import * as errors from "./utils/errors";
 
