@@ -1,20 +1,20 @@
-export class ZNotifyError extends Error {
+export class logifyError extends Error {
     code: string;
     constructor(message: string, code: string) {
         super(message);
-        this.name = 'ZNotifyError';
+        this.name = 'logifyError';
         this.code = code;
     }
 }
 
-export class ConfigurationError extends ZNotifyError {
+export class ConfigurationError extends logifyError {
     constructor(message: string) {
         super(message, 'CONFIGURATION_ERROR');
         this.name = 'ConfigurationError';
     }
 }
 
-export class MessageSendError extends ZNotifyError {
+export class MessageSendError extends logifyError {
     originalError: any;
     constructor(platform: string, originalError: any) {
         super(

@@ -9,7 +9,7 @@ export class DiscordClient {
     constructor(config: DiscordClientConfig) {
         this.config = {
             webhookUrl: config.webhookUrl ?? "",
-            username: config.username ?? "ZNotify Bot",
+            username: config.username ?? "logify Bot",
             avatarUrl: config.avatarUrl ?? "",
             defaultColor: config.defaultColor ?? 0x3498db,
             timeout: config.timeout ?? 5000,
@@ -118,7 +118,7 @@ export class DiscordClient {
 
     async testConnection(): Promise<boolean> {
         try {
-            await this.send("ZNotify connection test successful! 🚀");
+            await this.send("logify connection test successful! 🚀");
             return true;
         } catch {
             return false;

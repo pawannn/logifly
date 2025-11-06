@@ -3,7 +3,7 @@ import { DiscordClientConfig } from "./types/discord";
 import { BroadcastGroup } from "./broadcast";
 import { PlatformClient } from "./types/broadcast";
 
-export class ZNotify {
+export class logify {
     private readonly version: string;
     private groups: Map<string, BroadcastGroup>;
 
@@ -65,4 +65,4 @@ export class ZNotify {
     }
 }
 
-export default ZNotify;
+export default logify;

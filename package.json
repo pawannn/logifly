@@ -9,7 +9,7 @@
     "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist"
   },
   "keywords": [
-    "znotify",
+    "logify",
     "notifications",
     "discord",
     "webhooks",
