@@ -1,6 +1,6 @@
 {
   "name": "logifly",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "One core. Infinite notification channels.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
