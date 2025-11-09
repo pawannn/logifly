@@ -1,20 +1,20 @@
-export class logpingError extends Error {
+export class notiflyError extends Error {
     code: string;
     constructor(message: string, code: string) {
         super(message);
-        this.name = 'logpingError';
+        this.name = 'notiflyError';
         this.code = code;
     }
 }
 
-export class ConfigurationError extends logpingError {
+export class ConfigurationError extends notiflyError {
     constructor(message: string) {
         super(message, 'CONFIGURATION_ERROR');
         this.name = 'ConfigurationError';
     }
 }
 
-export class MessageSendError extends logpingError {
+export class MessageSendError extends notiflyError {
     originalError: any;
     constructor(platform: string, originalError: any) {
         super(

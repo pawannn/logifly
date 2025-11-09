@@ -1,5 +1,5 @@
 {
-  "name": "logping",
+  "name": "notifly",
   "version": "0.1.0",
   "description": "One core. Infinite notification channels.",
   "main": "dist/index.js",
@@ -15,7 +15,7 @@
     "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist"
   },
   "keywords": [
-    "logping",
+    "notifly",
     "notifications",
     "discord",
     "webhooks",
@@ -45,6 +45,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pawannn/logping"
+    "url": "https://github.com/pawannn/notifly"
   }
 }

@@ -1,10 +1,10 @@
-# logping
+# notifly
 
 Send notifications to multiple messaging platforms (Discord, Slack, Teams, etc.) with just 2 lines of code.
 
 ## Installation
 
-`npm install logping`
+`npm install notifly`
 
 ## Quick Start
 
@@ -18,10 +18,10 @@ Send notifications to multiple messaging platforms (Discord, Slack, Teams, etc.)
 ### 2. Send Your First Message
 
 ```javascript
-const logping = require('logping');
+const notifly = require('notifly');
 
 // Create a client
-const discord = logping.newDiscordClient({
+const discord = notifly.newDiscordClient({
   webhookUrl: 'YOUR_DISCORD_WEBHOOK_URL'
 });
 
@@ -70,18 +70,18 @@ await discord.sendEmbed({
 ### Broadcast to Multiple Channels
 ```javascript
 // Create clients for different channels
-const alerts = logping.newDiscordClient({ 
+const alerts = notifly.newDiscordClient({ 
   webhookUrl: 'ALERTS_WEBHOOK' 
 });
-const logs = logping.newDiscordClient({ 
+const logs = notifly.newDiscordClient({ 
   webhookUrl: 'LOGS_WEBHOOK' 
 });
-const team = logping.newDiscordClient({ 
+const team = notifly.newDiscordClient({ 
   webhookUrl: 'TEAM_WEBHOOK' 
 });
 
 // Group them together
-const group = logping.createGroup('critical', [alerts, logs, team]);
+const group = notifly.createGroup('critical', [alerts, logs, team]);
 
 // Send to all channels at once!
 await group.broadcast('🚨 Critical alert: Server down!');
@@ -98,11 +98,6 @@ await group.broadcastError('Database Error', 'Connection timeout');
 | `sendWarning(title, desc)` | Yellow warning | `await client.sendWarning('Warning', 'Be careful')` |
 | `sendInfo(title, desc)` | Blue info message | `await client.sendInfo('Info', 'FYI')` |
 | `sendEmbed(options)` | Rich formatted message | `await client.sendEmbed({...})` |
-
-## Testing
-
-### Run tests
-`npm test`
 
 ## Coming Soon
 
